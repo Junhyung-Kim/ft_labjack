@@ -9,14 +9,11 @@
 
 int main(int argc, char **argv)
 {
-
-	// #define NUM_FRAMES 5
-
 	ros::init(argc, argv, "voltage_publisher_node");
 
 	ros::NodeHandle nh;
 
-	ros::Publisher ros_pub = nh.advertise<std_msgs::Float64MultiArray>("/ros_topic", 10);
+	ros::Publisher ros_pub = nh.advertise<std_msgs::Float64MultiArray>("/ft_labjack", 10);
 
 	ros::Rate rate(1);
 
